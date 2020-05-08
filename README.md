@@ -5,16 +5,16 @@ Khi mình tìm hiểu một công nghệ mới, hay các vấn đề xung quanh 
 
 > Đây là dự án đầu tiên mình làm trong loạt chia sẻ này, nó gồm các mục sau: 
 
-* [] Tạo một server sử dụng graphql 
-* [] Thêm dataloader khi xử lý data, call api khác 
-* [] Ghi log, truy vết lỗi 
-* [] easy json 
-* [] viết test case 
+* [ ] Tạo một server sử dụng graphql 
+* [ ] Thêm dataloader khi xử lý data, call api khác 
+* [ ] Ghi log, truy vết lỗi 
+* [ ] easy json 
+* [ ] viết test case 
 
 P/s
 --- 
 
-> Trong quá trình thực khó tránh khỏi những sai sót, nếu bạn phát hiện điểm bất hợp lý hãy báo cho mình bằng cách  
+> Trong quá trình thực hiện khó tránh khỏi những sai sót, nếu bạn phát hiện điểm bất hợp lý hãy báo cho mình bằng cách  
 > tạo một issues trong repository này, mình sẽ trả lời các bạn sớm nhất có thể  
 
 Nếu nhìn trên bảng xếp hạng trong các cuộc thi về lập trình trên thế giới, có lẽ bạn sẽ nhận ra một điều: `lập trình viên China thường chiếm những thứ hạng cao nhất`, tạm bỏ qua yếu tố đông dân, tôi nghĩ việc chia sẻ các kiến thức của họ là một trong những yếu tố giúp `China` có số lượng lập trình viên giỏi và đông đảo đến vậy. Chỉ có chia sẻ những kiến thức mình tích lũy được cho mọi người sẽ giúp mình hiểu về nó hơn và giúp cộng đồng lập trình viên của chúng ta lớn mạnh hơn, nhanh hơn trong việc tìm hiểu các công nghệ, ngôn ngữ,... Nếu chúng ta không ngừng chia sẻ những gì mình học được, tôi tin rằng một ngày không xa `Việt Nam` sẽ nằm trong top những nước có chất lượng lập trình viên cao nhất thế giới và làm ra những sản phẩm cho cả thế giới dùng, để `Việt Nam` có thể sánh vai được với các cường quốc trong lĩnh vực công nghệ. 
