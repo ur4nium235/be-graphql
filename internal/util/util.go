@@ -1,10 +1,10 @@
 package util
 
 import (
+	"be-graphql/internal/logging"
 	"github.com/BurntSushi/toml"
-	"log"
 	"os"
-	"runtime"
+	"time"
 )
 
 /**
@@ -29,30 +29,21 @@ func LoadFileConfig(fileName string, config interface{}) error {
 
 func HandlePrintf(msg interface{}) {
 	if msg != nil {
-		log.Printf("[I] %v", msg)
+		contextLogger := logging.WithFields(logging.Fields{"time":time.Now().Unix()})
+		contextLogger.Infof("%v", msg)
 	}
 }
 
 func HandleErrorPrintf(err interface{}, msg string) {
 	if err != nil {
-		_, fn, line, ok := runtime.Caller(1)
-		if ok {
-			if len(msg) > 0 {
-				log.Printf("[E] %v %s:%d \t %v", err, fn, line, msg)
-			} else {
-				log.Printf("[E] %v %s:%d", err, fn, line)
-			}
-		} else if len(msg) > 0 {
-			log.Printf("[E] %v", msg)
-		}
+		logger := logging.WithFields(logging.Fields{"time": time.Now().Unix()})
+		logger.Errorf("%v", err)
 	}
 }
 
 func HandleFatalf(err interface{}) {
 	if err != nil {
-		_, fn, line, ok := runtime.Caller(1)
-		if ok {
-			log.Printf("[E] %v %s:%d", err, fn, line)
-		}
+		logger := logging.WithFields(logging.Fields{"time": time.Now().Unix()})
+		logger.Fatalf("%v", err)
 	}
 }
