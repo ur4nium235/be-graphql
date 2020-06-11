@@ -1,7 +1,8 @@
 package util
 
 import (
-	"be-graphql/internal/logging"
+	"github.com/valyala/fasthttp"
+	"server-graphql/internal/logging"
 	"github.com/BurntSushi/toml"
 	"os"
 	"time"
@@ -47,3 +48,9 @@ func HandleFatalf(err interface{}) {
 		logger.Fatalf("%v", err)
 	}
 }
+
+func CreateFastClient(maxConnsPerHost int) *fasthttp.Client {
+	return &fasthttp.Client{MaxConnsPerHost: maxConnsPerHost, MaxIdleConnDuration: 5 * time.Second,
+		ReadTimeout: 2 * time.Second, WriteTimeout: 2 * time.Second,}
+}
+
