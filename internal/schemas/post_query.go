@@ -120,7 +120,7 @@ func (pq *PostQuery) initPostSchema(post *graphql.Object) *graphql.Object {
 						if pq.getPostFunc != nil {
 							return pq.getPostFunc(p.Args)
 						} else {
-							return make(map[string]interface{}), errors.New(`Processing not registered {user}`)
+							return make(map[string]interface{}), errors.New(`Processing not registered`)
 						}
 					},
 					//DeprecationReason: "",
@@ -134,7 +134,7 @@ func (pq *PostQuery) initPostSchema(post *graphql.Object) *graphql.Object {
 						if pq.getPostListFunc != nil {
 							return pq.getPostListFunc(p.Args)
 						} else {
-							return make(map[string]interface{}), errors.New(`Processing not registered {user_list}`)
+							return make(map[string]interface{}), errors.New(`Processing not registered`)
 						}
 					},
 				},
