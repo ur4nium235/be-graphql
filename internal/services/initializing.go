@@ -58,7 +58,7 @@ func (gs *GraphQLServices) initSchemas() error {
 	//queries["post_list"] = gs.getPostList
 	gs.postQuery = &schemas.PostQuery{}
 
-	gs.postQuery.RegistryQueryFunc(nil, nil)
+	gs.postQuery.RegistryQueryFunc(nil, gs.getPostList)
 	gs.postQuery.RegistryBatchFunc(gs.getUserInfoFunc)
 
 	return gs.postQuery.InitSchema()

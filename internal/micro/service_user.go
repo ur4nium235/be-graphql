@@ -2,6 +2,7 @@ package micro
 
 import (
 	"context"
+	"fmt"
 	"server-graphql/internal/bjson"
 	"server-graphql/internal/util"
 )
@@ -23,6 +24,9 @@ func InitServiceUser(api string) *ServiceUser {
 }
 
 func (ca *ServiceUser) GetUserInfo(_ context.Context, userIDs ...string) map[string]bjson.UserInfo  {
+
+	fmt.Println("Get UserInfo")
+
 	if len(userIDs) == 0 {
 		return make(map[string]bjson.UserInfo)
 	}
@@ -39,7 +43,7 @@ func (ca *ServiceUser) GetUserInfo(_ context.Context, userIDs ...string) map[str
 		FullName: "Uranium235",
 		Address:  "HP",
 		City:     "HN",
-		Type:     1,
+		//Type:     1,
 		Role:     "admin",
 	}
 	out[user.UserID] = user
